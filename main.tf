@@ -1,10 +1,7 @@
-//--------------------------------------------------------------------
-// Variables
+provider "azurerm" {
+  features {}
+}
 
-
-
-//--------------------------------------------------------------------
-// Modules
 module "keyvault" {
   source  = "app.terraform.io/suncor-demo/keyvault/azure"
   version = "1.0.1"
