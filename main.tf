@@ -28,7 +28,7 @@ module "compute" {
   version = "1.0.0"
 
   license_type = "Windows_Client"
-  resource_group_name = "test2"
+  resource_group_name = "test1"
   vm_os_simple = "CentOS"
   vnet_subnet_id = "acctvnet"
 }
