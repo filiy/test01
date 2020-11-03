@@ -25,7 +25,7 @@ module "network" {
 
 module "compute" {
   source  = "app.terraform.io/suncor-demo/compute/azure"
-  version = "1.0.0"
+  version = "1.0.1"
 
   license_type = "Windows_Client"
   resource_group_name = "test1"
