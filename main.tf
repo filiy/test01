@@ -15,3 +15,10 @@ module "resource_group" {
   rg = "test1"
   support_stat_tag = "test1"
 }
+
+module "network" {
+  source  = "app.terraform.io/suncor-demo/network/azure"
+  version = "1.0.0"
+
+  resource_group_name = "test1"
+}
