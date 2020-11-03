@@ -22,3 +22,13 @@ module "network" {
 
   resource_group_name = "test1"
 }
+
+module "compute" {
+  source  = "app.terraform.io/suncor-demo/compute/azure"
+  version = "1.0.0"
+
+  license_type = "Windows_Client"
+  resource_group_name = "test2"
+  vm_os_simple = "CentOS"
+  vnet_subnet_id = "acctvnet"
+}
