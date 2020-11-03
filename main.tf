@@ -2,9 +2,9 @@ provider "azurerm" {
   features {}
 }
 
-module "keyvault" {
-  source  = "app.terraform.io/suncor-demo/keyvault/azure"
-  version = "1.0.1"
+module "resource_group" {
+  source  = "app.terraform.io/suncor-demo/resource-group/azure"
+  version = "1.0.0"
 
   bill_indicator_tag = "test1"
   company_code_tag = "test1"
@@ -14,9 +14,6 @@ module "keyvault" {
   region = "westus2"
   rg = "test1"
   support_stat_tag = "test1"
-  tenant_id = "65b6be73-2104-4ff4-899f-5bff3196f3d1"
-  user = "phil.thomson@arctiq.ca"
-  vault_name = "test1"
 }
 
 module "postgres_private_endpoint" {
@@ -47,9 +44,9 @@ module "postgres_private_endpoint" {
   vnet_rg_name = "vnetrg"
 }
   
-module "resource_group" {
-  source  = "app.terraform.io/suncor-demo/resource-group/azure"
-  version = "1.0.0"
+module "keyvault" {
+  source  = "app.terraform.io/suncor-demo/keyvault/azure"
+  version = "1.0.1"
 
   bill_indicator_tag = "test1"
   company_code_tag = "test1"
@@ -59,4 +56,7 @@ module "resource_group" {
   region = "westus2"
   rg = "test1"
   support_stat_tag = "test1"
+  tenant_id = "65b6be73-2104-4ff4-899f-5bff3196f3d1"
+  user = "phil.thomson@arctiq.ca"
+  vault_name = "test1"
 }
