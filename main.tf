@@ -32,5 +32,5 @@ module "compute" {
   vm_os_simple = "CentOS"
   vnet_subnet_id = "acctvnet"
   enable_ssh_key = "false"
-  vm_size = "Standard_D8s_v3"
+  vm_size = "Standard_D4s_v3"
 }
