@@ -31,4 +31,5 @@ module "compute" {
   resource_group_name = "test1"
   vm_os_simple = "CentOS"
   vnet_subnet_id = "acctvnet"
+  enable_ssh_key = "false"
 }
